@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinder Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="background-overlay">
+        <div class="background-section" id="leftSection"></div>
+        <div class="background-section" id="centerSection"></div>
+        <div class="background-section" id="rightSection"></div>
+    </div>
+    <div class="container">
+        <div class="card-container">
+            <div class="card current-card">
+                <div class="image-container">
+                    <div class="image-slider">
+                        <!-- 画像はJavaScriptで動的に追加 -->
+                    </div>
+                    <div class="image-dots">
+                        <!-- ドットはJavaScriptで動的に追加 -->
+                    </div>
+                    <button class="nav-button prev-button" onclick="previousImage()">❮</button>
+                    <button class="nav-button next-button" onclick="nextImage()">❯</button>
+                </div>
+                <div class="card-content">
+                    <h2>名前, 年齢</h2>
+                    <p class="bio">プロフィールの説明文がここに入ります。</p>
+                    <button class="details-button" onclick="toggleDetails()">詳細を表示</button>
+                </div>
+                <div class="profile-details">
+                    <div class="details-content">
+                        <h3>プロフィール詳細</h3>
+                        <div class="detail-item">
+                            <span class="label">居住地:</span>
+                            <span class="value">東京</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">職業:</span>
+                            <span class="value">エンジニア</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">趣味:</span>
+                            <span class="value">写真撮影、旅行</span>
+                        </div>
+                        <button class="close-details" onclick="toggleDetails()">閉じる</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button class="button-nope" onclick="swipeLeft()">✕</button>
+            <button class="button-like" onclick="swipeRight()">♥</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
